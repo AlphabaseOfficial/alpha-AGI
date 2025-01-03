@@ -1,0 +1,22 @@
+.cl-organizationPreviewMainIdentifier__organizationSwitcherTrigger{
+    display: none;
+}
+.cl-internal-1h94zne{
+    display: none;
+}
+.cl-organizationPreviewTextContainer__organizationSwitcherTrigger {
+    display: none;
+}
+.cl-organizationPreviewAvatarBox{
+    width: 27px;
+    height: 27px;
+    margin-bottom: 5px;
+}
+.cl-organizationSwitcherTrigger > .cl-userPreview__personalWorkspace > .cl-userPreviewTextContainer__personalWorkspace{
+    display: none;
+}
+.cl-userPreviewAvatarBox{
+    width: 27px;
+    height: 27px;
+    margin-bottom: 5px; 
+}
