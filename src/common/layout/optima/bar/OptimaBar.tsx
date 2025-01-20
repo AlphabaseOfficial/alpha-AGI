@@ -166,7 +166,8 @@ export function OptimaBar(props: { component: React.ElementType, currentApp?: Na
   return <>
 
     {/* Bar: [Drawer control] [Center Items] [Panel/Menu control] */}
-    <InvertedBar component={props.component} direction='horizontal' sx={props.sx}>
+    {/* InvertedBar */}
+    <InvertedBar component={props.component} direction='horizontal' sx={props.sx}>   
 
       {/* [Mobile] Drawer button */}
       {(props.isMobile || !navIsShown) && (

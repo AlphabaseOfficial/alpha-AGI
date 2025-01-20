@@ -46,12 +46,17 @@ const hideButtonSx: SxProps = {
 // `;
 
 const StatusBarContainer = styled(Box)({
-  borderBottom: '1px solid',
+  // borderBottom: '1px solid',
+  // borderTop: '1px solid',
+  marginBottom:"8px",
+  
   // borderBottomColor: 'var(--joy-palette-divider)',
   borderBottomColor: 'rgba(var(--joy-palette-neutral-mainChannel) / 0.1)',
+  borderTopColor: 'rgba(var(--joy-palette-neutral-mainChannel, 99 107 116) / 0.4)',
   // borderTopColor: 'rgba(var(--joy-palette-neutral-mainChannel, 99 107 116) / 0.4)',
   // backgroundColor: 'var(--joy-palette-background-surface)',
   // paddingBlock: '0.25rem',
+  marginRight:"50px",
   paddingInline: '0.5rem',
   // layout
   display: 'flex',
@@ -202,7 +207,7 @@ export function StatusBar(props: { toggleMinimized?: () => void, isMinimized?: b
     return null;
 
   return (
-    <StatusBarContainer aria-label='Status bar'>
+    <StatusBarContainer aria-label='Status bar' sx={{display:"flex", justifyContent:"center"}}>
 
       {(!props.toggleMinimized || !COMPOSER_ENABLE_MINIMIZE) && !props.isMinimized ? (
         // Close Button
@@ -217,11 +222,13 @@ export function StatusBar(props: { toggleMinimized?: () => void, isMinimized?: b
           {props.isMinimized ? <ExpandLessIcon /> : <MinimizeIcon />}
         </IconButton>
       )}
+<Box sx={{display:"flex", gap:2.5}}>
 
       {/* Show all shortcuts */}
       {shortcuts.map((shortcut, idx) => (
         <ShortcutItem key={shortcut.key + idx} shortcut={shortcut} />
       ))}
+      </Box>
 
     </StatusBarContainer>
   );
